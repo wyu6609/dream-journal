@@ -29,6 +29,6 @@ class DreamsController < ApplicationController
   end
 
   def dream_params
-    params.permit(:title, :instructions, :minutes_to_complete)
+    params.permit(:title, :description, :date)
   end
 end
