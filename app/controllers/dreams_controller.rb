@@ -2,7 +2,7 @@ class DreamsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
   def index
-    render json: Dream.all
+    render json: @current_user.dreams.all
   end
 
   def create
